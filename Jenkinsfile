@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Git checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/ShavB/boardgame-java.git'
+                git branch: 'qa', url: 'https://github.com/ShavB/boardgame-java.git'
             }
         }
         stage('Compile') {
