@@ -1,6 +1,4 @@
-FROM adoptopenjdk/openjdk11 
-      
-EXPOSE 8080
+FROM openjdk:17-alpine
 
 ENV APP_HOME /usr/src/app
 
@@ -8,5 +6,6 @@ COPY target/*.jar $APP_HOME/app.jar
 
 WORKDIR $APP_HOME
 
+EXPOSE 8080
 
-CMD ["java", "-jar", "app.jar"]
+CMD ["java" "-jar" "app.jar"]
